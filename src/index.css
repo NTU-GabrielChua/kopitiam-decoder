@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Design tokens: use them as classes like bg-marble, text-rim, font-display */
+@theme {
+  --font-display: "Alfa Slab One", Georgia, serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
+
+  --color-marble: #eceeea;  /* kopitiam marble table top */
+  --color-chit: #fbfaf5;    /* cup porcelain */
+  --color-ink: #1e1b18;     /* outlines and text */
+  --color-rim: #2e6a4c;     /* green rim on the classic kopi cup */
+  --color-signred: #b42f23; /* old signboard red, used for errors */
+}
+
+/* Lets the drink colour fade smoothly as you type */
+.liquid {
+  transition: fill 400ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid {
+    transition: none;
+  }
+}
